@@ -3,6 +3,10 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden bg-black flex items-center justify-center">
+      {/* Background with Ambient Glow */}
+      <div className="absolute inset-0 bg-black">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/10 rounded-full blur-[120px] pointer-events-none" />
+      </div>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black pointer-events-none" />
@@ -22,7 +26,7 @@ export default function Hero() {
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 1.2, delay: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
           className="text-6xl md:text-8xl lg:text-9xl font-serif text-white leading-[0.9] tracking-tighter mb-6"
         >
           Hire <span className="text-primary italic">Ready.</span>

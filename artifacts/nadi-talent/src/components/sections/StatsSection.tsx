@@ -21,6 +21,7 @@ function AnimatedCounter({ value, duration = 2, suffix = "" }: { value: number, 
       }, 1000 / 60);
       return () => clearInterval(timer);
     }
+    return undefined;
   }, [inView, value, duration]);
 
   return <span ref={ref}>{count}{suffix}</span>;

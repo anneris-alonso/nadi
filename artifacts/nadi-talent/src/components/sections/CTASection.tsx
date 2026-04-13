@@ -11,7 +11,6 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
           className="bg-card border border-border p-12 md:p-20 text-center relative rounded-sm shadow-2xl overflow-hidden"
         >
           {/* Gold Accent Line */}
