@@ -3,17 +3,6 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden bg-black flex items-center justify-center">
-      {/* Video Background */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-60 mix-blend-overlay"
-        poster="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop"
-      >
-        <source src="https://cdn.coverr.co/videos/coverr-typing-on-a-computer-keyboard-6940/1080p.mp4" type="video/mp4" />
-      </video>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black pointer-events-none" />
