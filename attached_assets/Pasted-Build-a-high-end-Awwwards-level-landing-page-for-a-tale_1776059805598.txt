@@ -1,0 +1,104 @@
+Build a high-end Awwwards-level landing page for a talent platform called NADI Talent Group with a luxury editorial aesthetic and cutting-edge motion design.
+
+🔥 Core Requirements (NON-NEGOTIABLE)
+Premium animations using Framer Motion
+Parallax scrolling effects
+Cinematic video backgrounds (use placeholder video URLs from free sources like Pexels, Coverr, or Pixabay)
+Glassmorphism (liquid glass) UI elements
+Smooth scroll + micro-interactions everywhere
+High-end typography layout (editorial / fashion magazine style)
+Fully responsive (desktop-first, but perfect on mobile)
+Performance optimized
+🎨 Brand Identity (STRICT)
+Primary colors:
+Teal: #08646d
+Gold: #ac822f
+Supporting palette:
+Black: #09090b
+White: #ffffff
+Light gray: #f3f3f3
+🎯 Design Direction
+Use a dark luxury base (black background) for main sections
+Alternate with white/light gray sections for contrast and readability
+Use teal for structure and identity
+Use gold ONLY for accents, highlights, and premium feel (NOT overused)
+🧠 Brand Messaging (VERY IMPORTANT)
+
+This is NOT a recruitment agency.
+This is a global hiring infrastructure platform.
+
+Key concepts:
+
+“Hire Ready”
+Speed, Quality, Scale, Ethics
+Pre-trained talent
+Multi-country sourcing (Asia → GCC)
+Zero fees for candidates
+AI-powered + people-centered
+
+Tone:
+
+Premium
+Confident
+Minimal
+Visionary (not salesy)
+🧱 Landing Page Structure
+1. Hero Section (FULLSCREEN)
+Cinematic background video (placeholder URL)
+Large editorial typography:
+“Hire Ready.”
+“The Infrastructure for Global Talent”
+Subtext: short, powerful
+CTA buttons:
+“Hire Talent”
+“Explore Candidates”
+Glassmorphism overlay panel
+2. Problem Section (Parallax)
+Text reveals on scroll:
+“Slow. Limited. Risky. Expensive.”
+Subtle motion + fade transitions
+3. Vision Section (Cinematic + Motion)
+“We are building a world where hiring is fast, transparent, ethical.”
+Animated typography entrance
+4. What Makes NADI Different
+
+Grid with hover animations:
+
+Speed
+Quality
+Scale
+Ethics
+5. Product / Value Section
+
+Split layout:
+
+Left: text
+Right: animated visuals or image placeholders
+6. Interactive Section
+Horizontal scroll or parallax storytelling
+Show:
+Recruiter pain → NADI solution
+7. CTA Section (Premium)
+Strong statement
+Gold accent usage
+Glassmorphism card
+8. Footer
+Minimal, clean, editorial
+🧩 Assets
+Use placeholder images from Unsplash / Pexels
+Use placeholder videos (IMPORTANT)
+Structure code so assets are easy to replace later
+⚙️ Tech Stack
+React (or Next.js if possible)
+Tailwind CSS
+Framer Motion
+Clean component structure
+🚫 Avoid
+Generic SaaS design
+Overcrowded UI
+Cheap gradients
+Overuse of gold
+Basic animations
+✅ Goal
+
+This should look like a premium startup featured on Awwwards, not a template.

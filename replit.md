@@ -4,6 +4,13 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Artifacts
+
+- **NADI Talent Group** (`artifacts/nadi-talent`): Premium landing page for NADI Talent Group — a global hiring infrastructure platform. Awwwards-level luxury editorial design with Framer Motion animations, parallax scrolling, glassmorphism UI elements, and cinematic video backgrounds.
+  - Brand colors: Teal `#08646d`, Gold `#ac822f`, Black `#09090b`
+  - Fonts: Cormorant Garamond (editorial headers) + Inter (body)
+  - Sections: Hero → Problem → Vision → Differentiators → Value → Story (horizontal scroll) → Stats → CTA → Footer
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces
@@ -15,6 +22,7 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+- **Frontend**: React + Vite + Tailwind CSS + Framer Motion
 
 ## Key Commands
 
