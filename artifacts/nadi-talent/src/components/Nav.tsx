@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
+import logoWhite from "@assets/logo_white.png";
 
 export default function Nav() {
   return (
@@ -10,12 +11,9 @@ export default function Nav() {
       className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 py-4 border-b border-white/10 bg-black/30 backdrop-blur-xl"
     >
       <div className="flex items-center gap-2">
-        <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-          <span className="text-white font-serif font-semibold text-lg">N</span>
-        </div>
-        <span className="text-white font-sans font-medium tracking-widest text-sm uppercase">
-          NADI
-        </span>
+        <Link href="/">
+          <img src={logoWhite} alt="NADI Logo" className="h-14 w-auto cursor-pointer" />
+        </Link>
       </div>
 
       <div className="hidden md:flex items-center gap-8">

@@ -1,3 +1,5 @@
+import logoWhite from "@assets/logo_white.png";
+
 export default function Footer() {
   return (
     <footer className="bg-black py-20 border-t border-white/10 text-white/50">
@@ -6,12 +8,7 @@ export default function Footer() {
           
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-8 h-8 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-white font-serif font-semibold text-lg">N</span>
-              </div>
-              <span className="text-white/90 font-sans font-medium tracking-widest text-sm uppercase">
-                NADI
-              </span>
+              <img src={logoWhite} alt="NADI Logo" className="h-14 w-auto opacity-90" />
             </div>
             <p className="max-w-sm font-light text-sm leading-relaxed">
               The infrastructure for global talent. Connecting the ambitions of the GCC with the exceptional capabilities of Asia.
