@@ -23,10 +23,10 @@ export default function Home() {
       <SolutionsSection />
       <FeatureQuoteSection />
       <ValueSection />
-      <PulseNetworkSection />
       <StorySection />
-      <StatsSection />
+      <PulseNetworkSection />
       <CTASection />
+      <StatsSection />
       <Footer />
     </main>
   );

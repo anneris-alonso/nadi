@@ -13,17 +13,12 @@ export default function VisionSection() {
 
   return (
     <section id="vision" ref={containerRef} className="py-40 bg-black text-white relative min-h-[100dvh] flex items-center">
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover opacity-30 mix-blend-luminosity grayscale"
-        poster="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
-      >
-        <source src="https://cdn.coverr.co/videos/coverr-aerial-view-of-a-city-at-night-5545/1080p.mp4" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <img
+        src="/images/people-backgound.jpg"
+        alt="People background"
+        className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale"
+      />
 
       <div className="absolute inset-0 bg-black/60" />
 

@@ -19,7 +19,7 @@ export default function FeatureQuoteSection() {
           className="max-w-4xl"
         >
           <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-[1.1] tracking-tight">
-            "We don't just fill seats; we <span className="italic text-primary">architect</span> the human infrastructure of your future growth."
+            "We don't just fill seats; we architect the human infrastructure of your <span className="italic text-primary">future growth</span>."
           </h2>
           
           <div className="mt-12 h-px w-32 bg-black/10"></div>
