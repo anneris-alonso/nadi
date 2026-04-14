@@ -12,17 +12,19 @@ export default function ValueSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm">
-              <img 
-                src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=1000&auto=format&fit=crop" 
-                alt="Corporate Architecture" 
-                className="w-full h-full object-cover opacity-80"
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-[#0a0a0a]">
+              <iframe 
+                src='https://my.spline.design/animatedmockupiphone14pro-uP0Zrn56U5v66zY79POJbNRQ/' 
+                frameBorder='0' 
+                width='100%' 
+                height='100%'
+                className="w-full h-full"
                 loading="lazy"
-              />
-              <div className="absolute inset-0 border border-white/20 m-4 rounded-sm mix-blend-overlay"></div>
+                title="NADI Platform iPhone Mockup"
+              ></iframe>
               
               {/* Glassmorphism Card Overlay */}
-              <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-sm">
+              <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-sm pointer-events-none">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs uppercase tracking-widest text-white/50">Status</span>
                   <span className="text-xs uppercase tracking-widest text-primary font-bold">Verified</span>
