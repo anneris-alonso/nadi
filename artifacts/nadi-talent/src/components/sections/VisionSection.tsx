@@ -23,7 +23,14 @@ export default function VisionSection() {
       <div className="absolute inset-0 bg-[#2e3233]/60" />
 
       <motion.div 
-        style={{ opacity, scale }}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-100px" }}
+        transition={{ 
+          duration: 1.2, 
+          ease: [0.16, 1, 0.3, 1] as const
+        }}
+        style={{ scale }}
         className="relative z-10 max-w-5xl mx-auto px-6 text-center"
       >
         <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif leading-[1.1] tracking-tight">

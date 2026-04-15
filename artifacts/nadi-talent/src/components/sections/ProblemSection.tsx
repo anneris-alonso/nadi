@@ -32,10 +32,19 @@ export default function ProblemSection() {
         {words.map((word, i) => (
           <motion.div
             key={i}
-            style={{ y: word.transform }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ 
+              duration: 1, 
+              delay: i * 0.15,
+              ease: [0.16, 1, 0.3, 1] as const
+            }}
             className={`text-6xl md:text-7xl lg:text-8xl font-serif font-bold tracking-tight ${word.color}`}
           >
-            {word.text}
+            <motion.div style={{ y: word.transform }}>
+              {word.text}
+            </motion.div>
           </motion.div>
         ))}
       </div>
