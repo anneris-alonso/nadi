@@ -26,7 +26,7 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
     <div className={`relative ${className}`}>
       <motion.div
         ref={containerRef}
-        initial={{ opacity: 0, y: 50, scale: 0.95 }}
+        initial={{ opacity: 0, y: 20, scale: 0.98 }}
         whileInView={{ opacity: 1, y: 0, scale: 1 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ 
@@ -175,7 +175,7 @@ export default function SolutionsSection() {
               Our Solutions
             </motion.span>
             <motion.h2 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}

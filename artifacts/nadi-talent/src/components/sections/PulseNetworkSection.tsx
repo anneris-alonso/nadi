@@ -35,16 +35,15 @@ export default function PulseNetworkSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="relative w-[110%] -ml-[5%] min-h-[850px] overflow-hidden rounded-2xl bg-[#252828]">
-              <iframe 
-                src='https://my.spline.design/animatedmockupiphone14pro-uP0Zrn56U5v66zY79POJbNRQ/' 
-                frameBorder='0' 
-                width='100%' 
-                height='100%' 
-                className="absolute inset-0 w-full h-full border-none pointer-events-auto"
-                title="Nadi Global Network"
-                loading="lazy"
-              ></iframe>
+            <div className="relative w-full max-w-2xl mx-auto min-h-[500px] overflow-hidden rounded-2xl bg-[#252828] shadow-2xl">
+              <video 
+                src="/videos/app.mp4"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </motion.div>
 

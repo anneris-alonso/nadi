@@ -12,7 +12,7 @@ export default function ValueSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#252828]">
+            <div className="relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden rounded-2xl bg-[#252828] shadow-2xl">
               <video 
                 src="/videos/pulse.mp4"
                 autoPlay 

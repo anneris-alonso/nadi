@@ -26,15 +26,39 @@ export default function Home() {
       <ProblemSection />
       <VisionSection />
       
-      <Suspense fallback={<SectionFallback />}>
+      <Suspense fallback={<div className="min-h-[800px] bg-[#2e3233]/10" />}>
         <DifferentiatorSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[1200px] bg-[#2e3233]/10" />}>
         <SolutionsSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[600px] bg-white" />}>
         <FeatureQuoteSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[800px] bg-[#2e3233]/10" />}>
         <ValueSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[800px] bg-[#2e3233]/10" />}>
         <StorySection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[800px] bg-[#2e3233]/10" />}>
         <PulseNetworkSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[500px] bg-[#2e3233]/10" />}>
         <CTASection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[400px] bg-[#2e3233]/10" />}>
         <StatsSection />
+      </Suspense>
+
+      <Suspense fallback={<div className="min-h-[300px] bg-[#2e3233]/10" />}>
         <Footer />
       </Suspense>
     </main>
