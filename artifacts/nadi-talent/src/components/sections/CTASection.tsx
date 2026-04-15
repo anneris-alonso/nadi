@@ -2,16 +2,26 @@ import { motion } from "framer-motion";
 
 export default function CTASection() {
   return (
-    <section className="py-40 bg-background relative overflow-hidden flex items-center justify-center">
-      {/* Decorative Blur */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+    <section className="py-40 bg-[#2e3233] relative overflow-hidden flex items-center justify-center">
+      {/* Background Video */}
+      <video
+        src="/videos/nadi_logo_animation.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-lighten grayscale"
+      />
       
-      <div className="max-w-4xl mx-auto px-6 relative z-10 w-full">
+      {/* Dark Overlay for contrast */}
+      <div className="absolute inset-0 bg-[#2e3233]/40 backdrop-blur-[2px]" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10 w-full">
         <motion.div 
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.98 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="bg-card border border-border p-12 md:p-20 text-center relative rounded-sm shadow-2xl overflow-hidden"
+          className="bg-white/95 backdrop-blur-2xl border border-white/20 p-12 md:p-24 lg:p-32 text-center relative rounded-sm shadow-2xl overflow-hidden"
         >
           {/* Gold Accent Line */}
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent"></div>
