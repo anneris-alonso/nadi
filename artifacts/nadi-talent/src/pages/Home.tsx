@@ -1,16 +1,22 @@
+import { lazy, Suspense } from "react";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import ProblemSection from "@/components/sections/ProblemSection";
 import VisionSection from "@/components/sections/VisionSection";
-import SolutionsSection from "@/components/sections/SolutionsSection";
-import DifferentiatorSection from "@/components/sections/DifferentiatorSection";
-import FeatureQuoteSection from "@/components/sections/FeatureQuoteSection";
-import ValueSection from "@/components/sections/ValueSection";
-import PulseNetworkSection from "@/components/sections/PulseNetworkSection";
-import StorySection from "@/components/sections/StorySection";
-import StatsSection from "@/components/sections/StatsSection";
-import CTASection from "@/components/sections/CTASection";
-import Footer from "@/components/Footer";
+
+// Lazy loaded sections
+const DifferentiatorSection = lazy(() => import("@/components/sections/DifferentiatorSection"));
+const SolutionsSection = lazy(() => import("@/components/sections/SolutionsSection"));
+const FeatureQuoteSection = lazy(() => import("@/components/sections/FeatureQuoteSection"));
+const ValueSection = lazy(() => import("@/components/sections/ValueSection"));
+const StorySection = lazy(() => import("@/components/sections/StorySection"));
+const PulseNetworkSection = lazy(() => import("@/components/sections/PulseNetworkSection"));
+const CTASection = lazy(() => import("@/components/sections/CTASection"));
+const StatsSection = lazy(() => import("@/components/sections/StatsSection"));
+const Footer = lazy(() => import("@/components/Footer"));
+
+// Minimal fallback to maintain layout stability during hydration
+const SectionFallback = () => <div className="min-h-[400px] bg-[#2e3233]/20 animate-pulse w-full" />;
 
 export default function Home() {
   return (
@@ -19,15 +25,18 @@ export default function Home() {
       <Hero />
       <ProblemSection />
       <VisionSection />
-      <DifferentiatorSection />
-      <SolutionsSection />
-      <FeatureQuoteSection />
-      <ValueSection />
-      <StorySection />
-      <PulseNetworkSection />
-      <CTASection />
-      <StatsSection />
-      <Footer />
+      
+      <Suspense fallback={<SectionFallback />}>
+        <DifferentiatorSection />
+        <SolutionsSection />
+        <FeatureQuoteSection />
+        <ValueSection />
+        <StorySection />
+        <PulseNetworkSection />
+        <CTASection />
+        <StatsSection />
+        <Footer />
+      </Suspense>
     </main>
   );
 }

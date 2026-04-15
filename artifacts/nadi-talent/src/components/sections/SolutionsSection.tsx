@@ -44,6 +44,7 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
                 src={image} 
                 alt="Context" 
                 style={{ y }}
+                loading="lazy"
                 className="absolute inset-0 w-full h-[120%] object-cover opacity-100 grayscale-[100%] saturate-0 group-hover:grayscale-0 group-hover:saturate-100 group-hover:scale-105 transition-all duration-1000 ease-out"
               />
             )}
@@ -178,9 +179,9 @@ export default function SolutionsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
-              className="text-white text-5xl md:text-7xl font-serif leading-[1.1]"
+              className="text-white text-3xl md:text-5xl font-serif leading-[1.1]"
             >
-              <h2 className="text-3xl md:text-5xl font-serif">Tailored Excellence at Every Stage.</h2>
+              Tailored Excellence at Every Stage.
             </motion.h2>
           </div>
         </div>

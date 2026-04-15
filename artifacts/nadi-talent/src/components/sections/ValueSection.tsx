@@ -13,15 +13,14 @@ export default function ValueSection() {
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#252828]">
-              <iframe 
-                src='https://my.spline.design/animatedmockupiphone14pro-uP0Zrn56U5v66zY79POJbNRQ/' 
-                frameBorder='0' 
-                width='100%' 
-                height='100%'
-                className="w-full h-full"
-                loading="lazy"
-                title="NADI Platform iPhone Mockup"
-              ></iframe>
+              <video 
+                src="/videos/pulse.mp4"
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+              />
               
               {/* Glassmorphism Card Overlay */}
               <div className="absolute bottom-8 left-8 right-8 p-6 glass-panel pointer-events-none">
