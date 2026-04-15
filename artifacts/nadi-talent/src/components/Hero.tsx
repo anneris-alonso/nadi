@@ -393,7 +393,7 @@ export default function Hero() {
               <div className="flex items-center justify-between mb-3">
                 <div className="flex items-center gap-2">
                   <Activity className="w-3.5 h-3.5" style={{ color: "#2dd4bf" }} />
-                  <span style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.8)", letterSpacing: "0.04em" }}>Bio-polymer</span>
+                  <span style={{ fontSize: 11, fontWeight: 600, color: "rgba(255,255,255,0.8)", letterSpacing: "0.04em" }}>Tech Stack Analysis</span>
                 </div>
                 <div className="flex gap-1.5">
                   <div style={{ width: 7, height: 7, borderRadius: "50%", background: "#ff5f57" }} />
@@ -412,7 +412,7 @@ export default function Hero() {
                   </ResponsiveContainer>
                   <div style={{ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                     <span style={{ fontSize: 14, fontWeight: 800, color: "white" }}>92%</span>
-                    <span style={{ fontSize: 8, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>yield</span>
+                    <span style={{ fontSize: 8, color: "rgba(255,255,255,0.4)", textTransform: "uppercase", letterSpacing: "0.08em" }}>fit score</span>
                   </div>
                 </div>
                 <div style={{ flex: 1 }}>
@@ -439,7 +439,7 @@ export default function Hero() {
                 </ResponsiveContainer>
               </div>
               <div style={{ display: "flex", justifyContent: "space-between", paddingTop: 6, borderTop: "1px solid rgba(255,255,255,0.07)" }}>
-                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.35)" }}>Last 10 cycles</span>
+                <span style={{ fontSize: 9, color: "rgba(255,255,255,0.35)" }}>Last 10 placements</span>
                 <span style={{ fontSize: 9, color: "#13646d", fontWeight: 600 }}>+12.4%</span>
               </div>
             </div>
@@ -496,8 +496,8 @@ export default function Hero() {
               </div>
               {/* Track info */}
               <div style={{ marginBottom: 10 }}>
-                <div style={{ fontSize: 11, fontWeight: 700, color: "#0a2540", marginBottom: 2 }}>Synthetic Synthesis</div>
-                <div style={{ fontSize: 9, color: "rgba(10,37,64,0.45)" }}>Module 04 • Bio Runtime</div>
+                <div style={{ fontSize: 11, fontWeight: 700, color: "#0a2540", marginBottom: 2 }}>Candidate Interview</div>
+                <div style={{ fontSize: 9, color: "rgba(10,37,64,0.45)" }}>Senior Designer • Tech Hub</div>
               </div>
               {/* Progress bar */}
               <div style={{ marginBottom: 8 }}>
@@ -533,9 +533,9 @@ export default function Hero() {
               boxShadow: "0 4px 24px rgba(0,0,0,0.09), inset 0 1px 0 rgba(255,255,255,0.9)",
             }}>
               {[
-                { label: "Neural Sync", val: "99.7%", icon: <Wifi className="w-3 h-3" style={{ color: "#13646d" }} />, c: "#13646d" },
-                { label: "Processing", val: "4.2 GHz", icon: <Cpu className="w-3 h-3" style={{ color: "#31848a" }} />, c: "#31848a" },
-                { label: "Growth", val: "+28%", icon: <TrendingUp className="w-3 h-3" style={{ color: "#8b5cf6" }} />, c: "#8b5cf6" },
+                { label: "Skill Alignment", val: "99.7%", icon: <Wifi className="w-3 h-3" style={{ color: "#13646d" }} />, c: "#13646d" },
+                { label: "Vetting Speed", val: "4.2 days", icon: <Cpu className="w-3 h-3" style={{ color: "#31848a" }} />, c: "#31848a" },
+                { label: "Retention", val: "+28%", icon: <TrendingUp className="w-3 h-3" style={{ color: "#8b5cf6" }} />, c: "#8b5cf6" },
               ].map((s, i) => (
                 <div key={i} style={{ textAlign: "center", minWidth: 64 }}>
                   <div style={{ display: "flex", justifyContent: "center", marginBottom: 4 }}>{s.icon}</div>
@@ -621,8 +621,8 @@ export default function Hero() {
                     <Bell style={{ width: 14, height: 14, color: "white" }} />
                   </div>
                   <div>
-                    <div style={{ fontSize: 11, fontWeight: 700, color: "#0a2540", marginBottom: 2 }}>System Alert</div>
-                    <div style={{ fontSize: 9, color: "rgba(10,37,64,0.5)", lineHeight: 1.4 }}>Bio-polymer synthesis cycle completed. Yield exceeded projections by 12.4%.</div>
+                    <div style={{ fontSize: 11, fontWeight: 700, color: "#0a2540", marginBottom: 2 }}>Recruitment Update</div>
+                    <div style={{ fontSize: 9, color: "rgba(10,37,64,0.5)", lineHeight: 1.4 }}>Technical assessment completed. Candidate score exceeded benchmark by 12.4%.</div>
                   </div>
                 </div>
                 <div style={{ display: "flex", gap: 6 }}>
@@ -657,8 +657,8 @@ export default function Hero() {
               </div>
               <div style={{ marginBottom: 8 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 4 }}>
-                  <span style={{ fontSize: 8, color: "rgba(10,37,64,0.5)" }}>Encryption</span>
-                  <span style={{ fontSize: 8, fontWeight: 700, color: "#13646d" }}>AES-512</span>
+                  <span style={{ fontSize: 8, color: "rgba(10,37,64,0.5)" }}>Verification</span>
+                  <span style={{ fontSize: 8, fontWeight: 700, color: "#13646d" }}>ISO-27001</span>
                 </div>
                 <div style={{ height: 3, borderRadius: 99, background: "rgba(0,0,0,0.08)" }}>
                   <div style={{ height: "100%", width: "98%", borderRadius: 99, background: "linear-gradient(90deg, #13646d, #31848a)" }} />
@@ -688,7 +688,7 @@ export default function Hero() {
               boxShadow: "0 4px 20px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.1)"
             }}>
               <Cpu style={{ width: 13, height: 13, color: "#2dd4bf" }} />
-              <span style={{ fontSize: 10, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>12.4 TFLOPS</span>
+              <span style={{ fontSize: 10, fontWeight: 600, color: "rgba(255,255,255,0.85)" }}>2.4k Candidates</span>
               <motion.div
                 animate={{ scale: [1, 1.4, 1] }}
                 transition={{ repeat: Infinity, duration: 1.2 }}
@@ -716,8 +716,8 @@ export default function Hero() {
                 <Zap style={{ width: 14, height: 14, color: "white" }} />
               </div>
               <div>
-                <div style={{ fontSize: 12, fontWeight: 800, color: "#0a2540" }}>4,820 mW</div>
-                <div style={{ fontSize: 8, color: "rgba(10,37,64,0.45)" }}>Neural Power</div>
+                <div style={{ fontSize: 12, fontWeight: 800, color: "#0a2540" }}>4,820 Active</div>
+                <div style={{ fontSize: 8, color: "rgba(10,37,64,0.45)" }}>Matching Power</div>
               </div>
             </div>
           </motion.div>
