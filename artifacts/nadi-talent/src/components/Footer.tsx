@@ -2,7 +2,7 @@ import logoWhite from "@assets/logo_white.png";
 
 export default function Footer() {
   return (
-    <footer className="bg-black py-20 border-t border-white/10 text-white/50">
+    <footer className="bg-[#2e3233] py-20 border-t border-white/10 text-white/50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           

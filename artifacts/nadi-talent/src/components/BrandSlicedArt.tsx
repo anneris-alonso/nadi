@@ -29,7 +29,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
       {/* Sliced Rectangle (Strip) */}
       <div className="h-[18vh] flex-grow flex-shrink-0 relative z-20 overflow-hidden">
         {/* Layer 1: Subtle Entrance Gradient (STAY IN STRIP ONLY) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-neutral-800 to-neutral-900 border-y border-black/5" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2e3233] to-[#252828] border-y border-white/5" />
         
         {/* Layer 2: Office Image (Delayed Reveal) */}
         <motion.div 
@@ -37,7 +37,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: revealDelay, duration: 0.8 }}
-          className="absolute inset-0 border-y border-black/5"
+          className="absolute inset-0 border-y border-white/5"
           style={{ 
             backgroundImage: "url(/images/brand_sliced_bg.png)",
             backgroundSize: "cover",
@@ -55,7 +55,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
           whileInView={{ opacity: 0 }}
           viewport={{ once: true }}
           transition={{ delay: revealDelay, duration: 0.6 }}
-          className="absolute h-full text-[19vh] font-serif font-black uppercase text-neutral-800 leading-[1] select-none border-y border-transparent"
+          className="absolute h-full text-[19vh] font-serif font-black uppercase text-[#2e3233] leading-[1] select-none border-y border-transparent"
         >
           {letter}
         </motion.h1>
@@ -66,7 +66,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: revealDelay, duration: 0.8 }}
-          className="h-full text-[19vh] font-serif font-black uppercase text-transparent bg-clip-text leading-[1] select-none border-y border-black/5"
+          className="h-full text-[19vh] font-serif font-black uppercase text-transparent bg-clip-text leading-[1] select-none border-y border-white/5"
           style={{ 
             backgroundImage: "url(/images/brand_sliced_bg.png)",
             backgroundSize: "cover",

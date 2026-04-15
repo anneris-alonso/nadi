@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @plugin "@tailwindcss/typography";
@@ -40,8 +40,8 @@
   --color-destructive-foreground: hsl(var(--destructive-foreground));
   --color-destructive-border: var(--destructive-border);
 
-  --font-sans: 'Inter', sans-serif;
-  --font-serif: 'Cormorant Garamond', serif;
+  --font-sans: 'Poppins', sans-serif;
+  --font-serif: 'Bizzmo', 'Poppins', sans-serif;
   --font-mono: Menlo, monospace;
 
   --radius-sm: calc(var(--radius) - 4px);
@@ -68,25 +68,25 @@
   --popover-foreground: 240 10% 4%;
   --popover-border: 0 0% 90%;
 
-  --primary: 185 86% 23%; /* #08646d */
+  --primary: 185 72% 25%; /* #13646d — Ocean Teal */
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 40 57% 43%; /* #ac822f */
+  --secondary: 35 61% 44%; /* #b3812c — Desert Gold */
   --secondary-foreground: 0 0% 100%;
 
   --muted: 0 0% 90%;
   --muted-foreground: 0 0% 40%;
 
-  --accent: 40 57% 43%;
+  --accent: 35 48% 55%; /* #c39b56 — Desert Gold Light */
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
   --input: 0 0% 85%;
-  --ring: 185 86% 23%;
+  --ring: 185 72% 25%;
 
-  --radius: 0rem;
+  --radius: 0.75rem;
 }
 
 .dark {
@@ -96,42 +96,42 @@
   --elevate-1: rgba(255,255,255, .04);
   --elevate-2: rgba(255,255,255, .09);
 
-  --background: 240 10% 4%; /* #09090b */
+  --background: 180 5% 19%; /* #2e3233 — Charcoal */
   --foreground: 0 0% 100%; /* #ffffff */
-  --border: 240 10% 15%;
+  --border: 180 2% 30%; /* #4a4d4d */
   
-  --card: 240 10% 6%;
+  --card: 180 3% 22%; /* #363a3b */
   --card-foreground: 0 0% 100%;
-  --card-border: 240 10% 15%;
+  --card-border: 180 2% 30%;
 
-  --popover: 240 10% 6%;
+  --popover: 180 3% 22%;
   --popover-foreground: 0 0% 100%;
-  --popover-border: 240 10% 15%;
+  --popover-border: 180 2% 30%;
 
-  --primary: 185 86% 23%; /* #08646d */
+  --primary: 185 72% 25%; /* #13646d — Ocean Teal */
   --primary-foreground: 0 0% 100%;
   
-  --secondary: 40 57% 43%; /* #ac822f */
+  --secondary: 35 61% 44%; /* #b3812c — Desert Gold */
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 240 10% 15%;
-  --muted-foreground: 240 5% 60%;
+  --muted: 180 2% 26%; /* #404343 */
+  --muted-foreground: 100 1% 67%; /* #abadac */
 
-  --accent: 40 57% 43%;
+  --accent: 35 48% 55%; /* #c39b56 */
   --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
 
-  --input: 240 10% 20%;
+  --input: 180 2% 30%;
   --sidebar-ring: 240 4.9% 83.9%;
 
   /* Custom Branding Colors */
-  --nadi-teal: 185 86% 23%;
-  --nadi-gold: 40 57% 43%;
-  --nadi-teal-dark: 185 86% 15%;
-  --nadi-gold-dark: 40 57% 30%;
-  --ring: 185 86% 23%;
+  --nadi-teal: 185 72% 25%;
+  --nadi-gold: 35 61% 44%;
+  --nadi-teal-dark: 185 72% 18%;
+  --nadi-gold-dark: 35 61% 32%;
+  --ring: 185 72% 25%;
 }
 
 @layer utilities {
@@ -139,13 +139,13 @@
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border-radius: 0;
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     box-shadow: 
       0 8px 32px rgba(0, 0, 0, 0.1),
       inset 0 1px 0 rgba(255, 255, 255, 0.5),
       inset 0 -1px 0 rgba(255, 255, 255, 0.1),
-      inset 0 0 20px 10px rgba(255, 255, 255, 0.2);
+      inset 0 0 20px 10px rgba(255, 255, 255, 1);
     position: relative;
     overflow: hidden;
   }
@@ -179,6 +179,18 @@
       rgba(255, 255, 255, 0.3)
     );
   }
+
+  /* Futuristic glass panel — lighter variant for cards over charcoal */
+  .glass-panel {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  }
 }
 
 @layer base {
@@ -192,6 +204,6 @@
     @apply font-sans antialiased bg-background text-foreground;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-serif font-light tracking-tight;
+    @apply font-serif font-bold tracking-tight;
   }
 }

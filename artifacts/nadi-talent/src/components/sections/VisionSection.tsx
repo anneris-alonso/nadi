@@ -12,7 +12,7 @@ export default function VisionSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 1.1]);
 
   return (
-    <section id="vision" ref={containerRef} className="py-40 bg-black text-white relative min-h-[100dvh] flex items-center">
+    <section id="vision" ref={containerRef} className="py-40 bg-[#2e3233] text-white relative min-h-[100dvh] flex items-center">
       {/* Background Image */}
       <img
         src="/images/people-backgound.jpg"
@@ -20,7 +20,7 @@ export default function VisionSection() {
         className="absolute inset-0 w-full h-full object-cover opacity-40 mix-blend-luminosity grayscale"
       />
 
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-[#2e3233]/60" />
 
       <motion.div 
         style={{ opacity, scale }}

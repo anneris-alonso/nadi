@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function PulseNetworkSection() {
   return (
-    <section className="py-24 bg-black text-white relative overflow-hidden border-t border-white/10">
+    <section className="py-24 bg-[#2e3233] text-white relative overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           
@@ -22,7 +22,7 @@ export default function PulseNetworkSection() {
               Join our exclusive talent network and get matched with top-tier opportunities in the GCC and beyond.
             </p>
             <div className="mt-10">
-               <button className="border border-white/30 hover:border-primary hover:text-primary transition-all px-8 py-3 text-sm uppercase tracking-widest font-medium">
+               <button className="border border-white/30 hover:border-primary hover:text-primary transition-all px-8 py-3 rounded-full text-sm uppercase tracking-widest font-medium">
                  Get Started
                </button>
             </div>
@@ -35,7 +35,7 @@ export default function PulseNetworkSection() {
             viewport={{ once: true }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            <div className="relative w-[110%] -ml-[5%] min-h-[850px] overflow-hidden rounded-sm bg-[#0a0a0a]">
+            <div className="relative w-[110%] -ml-[5%] min-h-[850px] overflow-hidden rounded-2xl bg-[#252828]">
               <iframe 
                 src='https://my.spline.design/animatedmockupiphone14pro-uP0Zrn56U5v66zY79POJbNRQ/' 
                 frameBorder='0' 

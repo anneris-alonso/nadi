@@ -59,9 +59,9 @@ export default function DifferentiatorSection() {
             <motion.div 
               key={index}
               variants={itemVariants}
-              className="group p-8 border border-border bg-card hover:bg-black hover:text-white transition-all duration-500 rounded-sm relative overflow-hidden"
+              className="group p-8 border border-border bg-card hover:bg-[#2e3233] hover:text-white transition-all duration-500 rounded-2xl relative overflow-hidden"
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-transparent group-hover:bg-primary transition-colors duration-500"></div>
+              <div className="absolute top-0 left-0 w-full h-1 bg-transparent group-hover:bg-primary transition-colors duration-500 rounded-t-2xl"></div>
               <div className="mb-6 p-4 rounded-full bg-muted/50 w-fit group-hover:bg-white/10 transition-colors duration-500">
                 {feature.icon}
               </div>

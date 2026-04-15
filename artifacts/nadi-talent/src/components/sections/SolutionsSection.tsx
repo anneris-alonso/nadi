@@ -35,10 +35,10 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
           ease: [0.16, 1, 0.3, 1] as const // Apple-style curve
         }}
         whileHover={{ y: -10, transition: { duration: 0.3 } }}
-        className="relative w-full aspect-[4/5] md:aspect-auto md:h-[380px] overflow-hidden group rounded-none"
+        className="relative w-full aspect-[4/5] md:aspect-auto md:h-[380px] overflow-hidden group rounded-2xl"
       >
         {isGlass ? (
-          <div className="w-full h-full p-0 relative group rounded-none overflow-hidden border border-white/10 shadow-2xl">
+          <div className="w-full h-full p-0 relative group rounded-2xl overflow-hidden border border-white/10 shadow-2xl">
             {image && (
               <motion.img 
                 src={image} 
@@ -48,8 +48,8 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
               />
             )}
             {/* Clear "Glass Frame" overlay - border and inner glow only, center is clear */}
-            <div className="absolute inset-0 z-10 pointer-events-none rounded-none">
-               <div className="absolute inset-0 border border-white/30 rounded-none shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"></div>
+            <div className="absolute inset-0 z-10 pointer-events-none rounded-2xl">
+               <div className="absolute inset-0 border border-white/30 rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"></div>
                {/* Refracted edge effect */}
                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
                <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/40 to-transparent"></div>
@@ -57,7 +57,7 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
           </div>
         ) : (
           <div 
-            className="w-full h-full p-8 flex flex-col justify-between text-white relative z-20 group-hover:shadow-2xl transition-shadow rounded-none"
+            className="w-full h-full p-8 flex flex-col justify-between text-white relative z-20 group-hover:shadow-2xl transition-shadow rounded-2xl"
             style={{ backgroundColor: color }}
           >
             <div className="flex justify-between items-start">
@@ -112,8 +112,8 @@ const getArrowStyles = (dir: string) => {
 };
 
 export default function SolutionsSection() {
-  const brandTeal = "#08646d";
-  const brandGold = "#ac822f";
+  const brandTeal = "#13646d";
+  const brandGold = "#b3812c";
 
   const solutions = [
     {
@@ -134,20 +134,30 @@ export default function SolutionsSection() {
       id: "03",
       title: "Specialized Search",
       text: "AI-powered, human-centric matching for highly skilled and critical roles. Top-tier professionals based on exact skills.",
-      color: brandGold, // Changed to Gold to alternate with 01
+      color: brandGold,
       img: "/images/recruitment_tech_abstract_1776111562869.png"
     },
     {
       id: "04",
       title: "RPO (Recruitment Process Outsourcing)",
       text: "End-to-end management of your hiring infrastructure. Algorithmic sourcing and seamless relocation support.",
-      color: brandTeal, // Changed to Teal to alternate with 02
+      color: brandTeal,
       img: "/images/global_infrastructure_nodes_1776111591924.png"
     }
   ];
 
   return (
-    <section className="py-40 bg-[#050505] relative overflow-hidden">
+    <section className="py-40 bg-[#2e3233] relative overflow-hidden">
+      {/* Grid Pattern Overlay */}
+      <div 
+        className="absolute inset-0 z-0 pointer-events-none opacity-30"
+        style={{
+          backgroundImage: "url('/images/grid_bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
       {/* Background Decorative Glows */}
       <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[160px] opacity-30"></div>
       <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[160px] opacity-20"></div>
@@ -170,7 +180,7 @@ export default function SolutionsSection() {
               transition={{ duration: 0.8 }}
               className="text-white text-5xl md:text-7xl font-serif leading-[1.1]"
             >
-              Tailored Excellence<br />at Every Stage.
+              <h2 className="text-3xl md:text-5xl font-serif">Tailored Excellence at Every Stage.</h2>
             </motion.h2>
           </div>
         </div>

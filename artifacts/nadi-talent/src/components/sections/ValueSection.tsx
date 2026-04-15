@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function ValueSection() {
   return (
-    <section className="py-32 bg-black text-white relative border-t border-white/10">
+    <section className="py-32 bg-[#2e3233] text-white relative border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
@@ -12,7 +12,7 @@ export default function ValueSection() {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm bg-[#0a0a0a]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl bg-[#252828]">
               <iframe 
                 src='https://my.spline.design/animatedmockupiphone14pro-uP0Zrn56U5v66zY79POJbNRQ/' 
                 frameBorder='0' 
@@ -24,7 +24,7 @@ export default function ValueSection() {
               ></iframe>
               
               {/* Glassmorphism Card Overlay */}
-              <div className="absolute bottom-8 left-8 right-8 p-6 bg-black/40 backdrop-blur-xl border border-white/10 rounded-sm pointer-events-none">
+              <div className="absolute bottom-8 left-8 right-8 p-6 glass-panel pointer-events-none">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-xs uppercase tracking-widest text-white/50">Status</span>
                   <span className="text-xs uppercase tracking-widest text-primary font-bold">Verified</span>
