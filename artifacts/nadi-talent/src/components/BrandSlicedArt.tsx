@@ -42,6 +42,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
             backgroundImage: "url(/images/brand_sliced_bg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundAttachment: "fixed"
           }}
         />
       </div>
@@ -70,6 +71,7 @@ const Slice = ({ letter, index, delay }: { letter: string; index: number; delay:
             backgroundImage: "url(/images/brand_sliced_bg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
+            backgroundAttachment: "fixed"
           }}
         >
           {letter}
