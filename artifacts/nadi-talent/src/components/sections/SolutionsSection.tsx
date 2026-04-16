@@ -10,10 +10,30 @@ interface CardProps {
   color?: string;
   arrowDirection?: "right" | "down" | "up" | "left" | null;
   className?: string;
+  brandLetter?: string;
   delay?: number;
 }
 
-const Card = ({ number, title, text, isGlass, image, color, arrowDirection, className, delay = 0 }: CardProps) => {
+const BRAND_PATHS: Record<string, { path: string; viewBox: string }> = {
+  N: { 
+    path: "M1320.2-2526.5l231.2,128v-127h27.6v169.4l-1-.5c-6-2.4-14.5-8.1-230-127.8v127h-27.8v-169.1Z",
+    viewBox: "1315 -2530 270 180" 
+  },
+  A: { 
+    path: "M1765.8-2525.5l6.8,7.3c24.9,27.6,115.7,127,141.3,154.6l6.5,7.5h-36.8l-118.1-129-93.6,102.6h150.3l24.2,26.4h-235.7l155.1-169.4Z",
+    viewBox: "1605 -2530 325 180"
+  },
+  D: { 
+    path: "M1812.5-2525.5h212.2v.2c48.4,0,89,38,89,84.4s-41.6,84.7-89,84.7h-57.1l-24.2-26.4h81.3c32.9,0,61.2-24.7,61.2-58.3s-26.9-58.1-61.2-58.1h-188c-4.8-5.1-9.2-9.9-13.3-14.5-4.1-4.6-7.7-8.5-10.9-12.1Z",
+    viewBox: "1810 -2530 310 180"
+  },
+  I: { 
+    path: "M2154.4-2356.1v-169.4h27.8v169.4h-27.8Z",
+    viewBox: "2150 -2530 35 180"
+  }
+};
+
+const Card = ({ number, title, text, isGlass, image, color, arrowDirection, className, delay = 0, brandLetter }: CardProps) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -48,13 +68,28 @@ const Card = ({ number, title, text, isGlass, image, color, arrowDirection, clas
                 className="absolute inset-0 w-full h-[120%] object-cover opacity-100 grayscale-[100%] saturate-0 group-hover:grayscale-0 group-hover:saturate-100 group-hover:scale-105 transition-all duration-1000 ease-out"
               />
             )}
-            {/* Clear "Glass Frame" overlay - border and inner glow only, center is clear */}
-            <div className="absolute inset-0 z-10 pointer-events-none rounded-2xl">
-               <div className="absolute inset-0 border border-white/30 rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.4)]"></div>
-               {/* Refracted edge effect */}
-               <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent"></div>
-               <div className="absolute bottom-0 left-0 right-0 h-[30%] bg-gradient-to-t from-black/40 to-transparent"></div>
-            </div>
+             {/* Brand Letter SVG Overlay */}
+             {brandLetter && BRAND_PATHS[brandLetter] && (
+               <div className="absolute inset-0 flex items-center justify-center z-20 pointer-events-none">
+                 <motion.svg
+                   viewBox={BRAND_PATHS[brandLetter].viewBox}
+                   initial={{ opacity: 0, scale: 0.9 }}
+                   whileInView={{ opacity: 0.4, scale: 1 }}
+                   transition={{ delay: delay + 0.2, duration: 1.2, ease: "easeOut" }}
+                   className="w-[90%] h-[90%] fill-white group-hover:opacity-70 group-hover:scale-110 transition-all duration-1000"
+                 >
+                   <path d={BRAND_PATHS[brandLetter].path} />
+                 </motion.svg>
+               </div>
+             )}
+
+             {/* Clear "Glass Frame" overlay - border and inner glow only, center is clear */}
+             <div className="absolute inset-0 z-30 pointer-events-none rounded-2xl">
+                <div className="absolute inset-0 border border-white/20 rounded-2xl shadow-[inset_0_1px_0_rgba(255,255,255,0.2)]"></div>
+                {/* Refracted edge effect */}
+                <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
+                <div className="absolute bottom-0 left-0 right-0 h-[40%] bg-gradient-to-t from-black/60 to-transparent"></div>
+             </div>
           </div>
         ) : (
           <div 
@@ -199,7 +234,7 @@ export default function SolutionsSection() {
           />
           
           {/* Card 2: Glass (matches Manpower) */}
-          <Card isGlass image={solutions[0].img} delay={0.2} />
+          <Card isGlass image={solutions[0].img} delay={0.2} brandLetter="N" />
           
           {/* Card 3: 03 Search */}
           <Card 
@@ -212,12 +247,12 @@ export default function SolutionsSection() {
           />
           
           {/* Card 4: Glass (matches Search) */}
-          <Card isGlass image={solutions[2].img} delay={0.6} />
+          <Card isGlass image={solutions[2].img} delay={0.6} brandLetter="A" />
 
           {/* Row 2 */}
           
           {/* Card 5: Glass (Extra/Filler) */}
-          <Card isGlass image="/images/global_infrastructure_nodes_1776111591924.png" delay={0.8} />
+          <Card isGlass image="/images/global_infrastructure_nodes_1776111591924.png" delay={0.8} brandLetter="D" />
 
           {/* Card 6: 02 Staffing */}
           <Card 
@@ -230,7 +265,7 @@ export default function SolutionsSection() {
           />
           
           {/* Card 7: Glass (matches Staffing) */}
-          <Card isGlass image={solutions[1].img} delay={0.4} />
+          <Card isGlass image={solutions[1].img} delay={0.4} brandLetter="I" />
           
           {/* Card 8: 04 RPO */}
           <Card 
